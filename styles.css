@@ -1,0 +1,850 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap');
+
+*{  
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;   
+    text-transform: capitalize;
+    transition: .25s linear;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    overflow-x: hidden;
+    font-size: 62.5%;
+
+}
+
+html::-webkit-scrollbar-thumb{
+    background: #000000;
+    border-radius: .5rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: #fff;
+}
+
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    font-size: 3.5rem;
+    color: #FF0000;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.heading span{
+    color: #000000;
+}
+
+.btn{
+    display: flex;
+    gap: .7rem;
+    border-radius: .5rem;
+    background: #000000;
+    color: #fff;
+    font-size: 1.8rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding: .9rem 3rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #2f2e2e;
+    
+}
+
+
+/* header */
+
+.header{
+    width: 96%;
+    position: fixed;
+    top: 1.5rem; left: 50%;  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1); 
+    padding: 1.5rem 5rem;
+    transform: translateX(-50%);
+    z-index: 1000;    
+ 
+}
+
+.header-active{
+    top: 0;
+    width: 100%;
+}
+
+.header .logo{
+    font-family: 'Bagel Fat One';
+    font-size: 2.8rem;
+    font-weight: bolder;
+    color: #000000;
+}
+
+.header .logo img{   
+    width: 1.7rem;
+    
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: #10221b;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: #FF0000;
+}
+
+.header .icons div,
+.header .icons a{
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: #000000;
+    cursor: pointer;
+    -webkit-text-stroke: .1rem #000000;
+}
+
+.header .icons div:hover,
+.header .icons a:hover{
+    -webkit-text-stroke: .1rem #000000;
+    color: white;
+}
+
+.header .info-form{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 5.5rem;
+    color: white;
+    background: #000000;
+    position: absolute;
+    top: 115%; right: -105%;
+    border-radius: .5rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    border: .8rem solid black;
+    
+    
+   
+}
+.header .info-form a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 12px
+}
+.header .info-form:hover {
+    text-decoration: underline white;
+   
+}
+.header .info-form.active{
+    right: 2rem;
+    transition: .4s linear;
+}
+
+
+#menu-btn{
+    display: none;
+}
+
+/* end */
+
+/* home */
+
+@keyframes fadeOut{
+    0%{
+        transform: scale(0.2);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeLeft{
+    0%{
+        transform: translateX(15rem);
+        opacity: 0;
+    }
+}
+
+.home{
+    position: relative;
+}
+
+.home .home-container .slide{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;   
+    padding-top: 8rem;
+    display: none;
+}
+
+.home .home-container .slide.active{
+    display: flex;
+}
+
+.home .home-container .slide .content{
+    animation: fadeLeft .5s linear .5s backwards;
+    flex: 1 1 40rem;
+    
+}
+
+.home .home-container .slide .content span{
+    font-family: 'Bagel Fat One';
+    font-size: 2rem;
+    color: #000000;
+}
+
+.home .home-container .slide .content h3{
+    font-family: 'Bagel Fat One' ;
+    font-size: 6rem;
+    color: #FF0000;
+    padding-top: .5rem;
+}
+
+.home .home-container .slide .content p{
+    font-size: 1.5rem;
+    color: #666;
+    padding: .5rem 0;
+    line-height: 2;
+}
+
+.home .home-container .slide .content .btn span{
+    color: #ffffff;
+}
+
+.home .home-container .slide .content .btn:hover{
+    background-color: #316FF6;
+    color: #ffffff;
+}
+
+.home .home-container .slide .image{
+    flex: 1 1 30rem;
+    padding: 3rem 0;
+}
+
+.home .home-container .slide .image img{
+    width: 100%;
+    animation: fadeOut .5s linear;
+}
+
+.home #slide-next,
+.home #slide-prev{
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    height: 5rem;
+    width: 5rem;
+    text-align: center;
+    background: #ffff;
+    cursor: pointer;
+    line-height: 5rem;
+    font-size: 3rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    
+
+}
+
+.home #slide-next:hover,
+.home #slide-prev:hover{
+    background: #ff0000;
+    color: #ffff;
+}
+
+.home #slide-next{
+    right: 2rem;
+}
+
+.home #slide-prev{
+    left: 2rem;
+}
+/* end */
+
+/* products */
+
+.products .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+}
+
+.products .box-container .box{
+    position: relative;
+    background: #f9f9f9;
+    overflow: hidden;
+    border-radius: 1rem;   
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.products .box-container .box .sold-out{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    display: block;
+    height: 2.5rem;
+    width: 10rem;
+    background: #ff0000;
+    color: #fff;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+
+.products .box-container .box .image{
+    height: 35rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.products .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.products .box-container .box:hover .image img{
+    transform: scale(1.1);
+}
+
+.products .box-container .box .content{
+    padding: 1.5rem 2rem;
+}
+
+.products .box-container .box .content h3{
+    font-size: 2rem;
+    color: #10221b;
+}
+
+.products .box-container .box .content .price{
+    font-size: 1.7rem;
+    color: #666;
+    padding: .5rem 0;
+}
+
+.products .box-container .box .content .btn{
+    position: absolute;
+    bottom: 0; right: 0;
+    display: flex;
+    font-size: 2rem;
+    padding: 1.2rem 1.25rem;
+    border-radius: 1rem 0 1rem 0;
+}
+
+.products .box-container .box .content .btn:hover{
+    background-color: #FF0000;
+    color: white;
+}
+
+/* end */
+
+
+/* Gallery */
+
+.gallery .gallery-slider .slide{
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    position: relative;
+    overflow: hidden;
+    border-radius: .5rem;
+  
+    
+}
+
+.gallery .gallery-slider .slide .social-facebook{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    display: block;
+    height: 2.5rem;
+    width: 3rem;
+    background: #316FF6;
+    color: #fff;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+}
+
+.gallery .gallery-slider .slide .social-instagram{
+    position: absolute;
+    top: 1rem; left: 1rem;
+    display: block;
+    height: 2.5rem;
+    width: 3rem;
+    line-height: 2.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    color: #f9f9f9;
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    
+
+}
+
+.gallery .gallery-slider .slide .image{
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    
+}
+
+.gallery .gallery-slider .slide .image:hover{
+    padding-bottom: 2rem;
+}
+
+.gallery .gallery-slider .slide .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    height: 4rem;
+    width: 4rem;
+    border-radius: .5rem;
+    background: #fff;
+    color: #000000;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+    background: #ff0000;
+    color: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: 1.5rem;
+}
+
+/* end */
+
+
+/* our coffee */
+
+.coffee{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.coffee .banner{
+    position: relative;
+    flex: 1 1 32rem;
+    overflow: hidden;
+    height: 30rem;
+    
+}
+
+.coffee .banner img{
+    opacity: 70%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.coffee .banner:hover img{
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.coffee .banner .content{
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+}
+
+.coffee .banner .content span{
+    font-size: 2rem;
+    color: #FF0000;
+}
+
+.coffee .banner .content h3{
+    font-size: 3.2rem;
+    color: #FF0000;
+    padding-top: .5rem;
+}
+
+.coffee .banner .content .btn span{
+    color: #fff;
+}
+
+/* end */
+
+/* content */
+
+
+
+.content .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.content .row .article {
+    padding: 2rem;
+    flex: 1 1 42rem;
+    
+}
+.content .row .image{
+    flex: 1 1 30rem;
+
+}
+
+.content .row .image img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.content .row .article h3{
+    font-family: 'Bagel Fat One', system-ui;
+    font-size: 4rem;
+    padding-bottom: 1rem;
+    color: #000000;
+}
+
+.content .row .article h2{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: #FF0000;
+}
+
+.content .row .article  p{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+
+/* end */
+
+/* banner */
+
+.banner-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.banner-container .banner{
+    flex: 1 1 32rem;
+    overflow: hidden;
+    height: 30rem;
+    position: relative;
+}
+
+.banner-container .banner img{
+    opacity: 30%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.banner-container .banner:hover img{
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+.banner-container .banner .content{
+    position: absolute;
+    top: 50%;
+    left: 3rem;
+    transform: translateY(-50%);
+}
+
+.banner-container .banner .content span{
+    font-size: 2rem;
+    color: #FF0000;
+}
+
+.banner-container .banner .content h3{
+    font-size: 3.2rem;
+    color: #FF0000;
+    padding-top: .5rem;
+}
+
+.banner-container .banner .content .btn span{
+    color: #fff;
+}
+
+/* end */
+
+/* our clients */
+
+.clients .clients-slider .slide{
+    position: relative;
+    overflow: hidden;
+    border-radius: .5rem;
+  
+    
+}
+
+.clients .clients-slider .slide .image{
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+}
+
+.clients .clients-slider .slide .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+    height: 4rem;
+    width: 4rem;
+    border-radius: .5rem;
+    background: #fff;
+    color: #10221b;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+    background: #FF0000;
+    color: white;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: 1.5rem;
+}
+
+/* end */
+
+/* Impact */
+
+.impact .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+}
+
+.impact .box-container .box:hover {
+    box-shadow: 0 0.5rem 1rem #FF0000;
+}
+
+.impact .box-container .box{
+    margin: 4rem 0;
+    padding-bottom: 2rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+.impact .box-container .box .image{
+    margin-top: -5rem;
+}
+
+.impact .box-container .box .image img{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.impact .box-container .box .content h3{
+    font-size: 2rem;
+    color: #FF0000;
+}
+
+.impact .box-container .box .content p{
+    font-size: 1.4rem;
+    color: #666;
+    padding: .5rem 1.5rem;
+}
+
+/* end */
+
+
+/* send Coffee */
+
+.send .container{
+    background: #0e0e0e;
+    align-items: center;
+    border-radius: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.send .container .content{
+    flex: 1 1 42rem;
+    margin: 0 3.5rem;
+    text-align: center;
+}
+
+.send .container .content .title{
+    color: #FF0000;
+    font-size: 2.8rem;
+}
+
+.send .container .content p{
+    color: #fff;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+}
+
+.send .container .content form{
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    padding: .5rem;
+    border-radius: .5rem;
+}
+
+.send .container .content form .input{
+    font-size: 1.5rem;
+    padding: 1rem 1.2rem;
+}
+
+.send .container .content form .btn{
+    margin-top: 0;
+}
+
+.send .container .image{
+    flex: 1 1 42rem;
+    
+}
+
+.send .container .image img{
+    width: 35vw;
+    height: 40vh;
+}
+
+/* end */
+
+/* contact */
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .image{
+    flex: 1 1 30rem;
+}
+
+.contact .row .image img{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.contact .row form{
+    flex: 1 1 42rem;
+    padding: 2rem;    
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    border-radius: .5rem;
+}
+
+.contact .row form h3{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    color: #10221b;
+}
+
+.contact .row form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact .row form .inputBox input{
+    width: 49%;
+}
+
+.contact .row form .inputBox input,
+.contact .row form textarea{
+    border: .1rem solid rgba(0,0,0,0.3);
+    padding: 1rem 1.2rem;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: #10221b;
+    text-transform: none;
+    margin: .7rem 0;
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+    width: 100%;
+}
+
+/* end */
+
+/* footer */
+
+.footer{
+    background: #000000;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.2rem;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: #ffffff;
+    line-height: 2;
+}
+
+.footer .box-container .box a{
+    display: block;
+    font-size: 1.4rem;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+.footer .box-container .box a:hover{
+    color: #FF0000;
+}
+
+.footer .box-container .box a i{
+    color: #ffffff;
+    padding-right: .5rem;
+}
+
+.credit{
+    text-align: center;
+    background: #000000;
+    color: #fff;
+    font-size: 2rem;
+}

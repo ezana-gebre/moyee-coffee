@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moyee Coffee</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="icon" href="/images/moyee-logo.png">
+</head>
+<body>
+    
+    <!-- header section starts -->
+
+    <header class="header">
+        <a href="#" class="logo"> Moyee Coffee</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#clients">Clients</a>
+            <a href="#impact">Impact</a>
+            <a href="#contact">contact us</a>
+        </nav>
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="info-btn" class="fas fa-info-circle"></div>          
+        </div>        
+        <div class="info-form" >       
+        <a href="https://linktr.ee/Ezanah" target="_blank">Info</a>        
+        </div>    
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- home section starts -->
+
+    <section class="home" id="home">
+        <div class="home-container">           
+            <div class="slide active">
+                <div class="content">
+                    <span>ሞዬ ቡና</span>
+                    <h3>The way coffee was always meant to be</h3>
+                    <p>We roast both high-end specialty grade and commercial grade blends.
+                         Our customers choose from many single-origin varieties, which are
+                          roasted and blended for optimum aroma and taste</p>
+                          <a href="https://www.facebook.com/moyeecoffee.et/videos/moyee-coffee-fairchain-explained/1860845573943804/" target="_blank">
+                    <button class="btn">
+                        <span>Watch Video</span>                       
+                    </button></a>
+                </div>
+                <div class="image">
+                    <img src="images/cherry-tea.png" alt="">
+                </div>
+            </div>
+
+            <div class="slide">
+                <div class="content">
+                    <span>Moyee Coffee</span>
+                    <h3>Authentic, Responsible, Exceptional</h3>
+                    <p>Born in Ethiopia, Moyee Coffee has grown to become a world-class, 
+                        multinational coffee company operating one of the largest roasting
+                         facilities in Africa</p>
+                         <a href="https://www.facebook.com/moyeecoffee.et/videos/moyee-coffee-fairchain-explained/1860845573943804/" target="_blank">
+                    <button class="btn">
+                        <span>Watch Video</span>                        
+                    </button></a>
+                </div>
+                <div class="image">
+                    <img src="/images/cascara.png" alt="">
+                </div>
+            </div>
+
+        </div> 
+        
+        
+        <div id="slide-next" onclick="next()" class="fas fa-angle-right"></div>
+        <div id="slide-prev" onclick="prev()" class="fas fa-angle-left"></div>
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- our product section starts -->
+
+    <section class="products" id="products">
+        <h1 class="heading"><span>our</span> products</h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="/images/header-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Double</h3>
+                    <div class="price">€6.00 — €22.00</div>
+                    <div class="gram">
+                        <span>1kg — 250g</span>
+                    </div>
+                    <a href="https://addismercato.com/%E1%88%9E%E1%8B%AC-%E1%89%A1%E1%8A%93-moye-coffee.html?category_id=150" 
+                        target="_blank" class="btn"> <i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="/images/cascara.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>cascara</h3>
+                    <div class="price">€7.00 — €24.00</div>
+                    <div class="gram">
+                        <span>1kg — 250g</span>
+                    </div>
+                    <a href="https://soderestore.com/%E1%88%9E%E1%8B%AC-%E1%89%A1%E1%8A%93-Moyee-Coffee-p157332101" 
+                        target="_blank" class="btn"> <i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/header-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Yirgachefe</h3>
+                    <div class="price">€7.00 — €24.00</div>
+                    <div class="gram">
+                        <span>1kg — 250g</span>
+                    </div>
+                    <a href="https://addismercato.com/%E1%88%9E%E1%8B%AC-%E1%89%A1%E1%8A%93-moye-coffee.html?category_id=150" 
+                        target="_blank" class="btn"> <i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <span class="sold-out">Sold Out</span>
+                    <img src="images/header-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Moyee Blend</h3>
+                    <div class="price">€12.00</div>
+                    <div class="gram">
+                        <span>1kg — 250g</span>
+                    </div>
+                    <a href="https://cavoncoffee.com/products/8-moyee-coffee-500g" 
+                        target="_blank" class="btn"> <i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/cherry-tea.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Coffee Cherry Tea</h3>
+                    <div class="price">€6.00 — €20.00</div>
+                    <div class="gram">
+                        <span>1kg — 250g</span>
+                    </div>
+                    <a href="https://addismercato.com/%E1%88%9E%E1%8B%AC-%E1%89%A1%E1%8A%93-moye-coffee.html?category_id=150" 
+                        target="_blank" class="btn"> <i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <div class="image">
+                    <img src="images/header-1.jpg" alt="">
+                </div>
+                <div class="content">
+                    <h3>Single</h3>
+                    <div class="price">€7.00 — €24.00</div>
+                    <div class="gram">
+                        <span>1kg — 250g</span>
+                    </div>
+                    <a href="https://addismercato.com/%E1%88%9E%E1%8B%AC-%E1%89%A1%E1%8A%93-moye-coffee.html?category_id=150" 
+                        target="_blank" class="btn"> <i class="fa fa-shopping-cart"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our product section ends -->
+
+    <!-- Gallery section starts -->
+
+    <section class="gallery" id="gallery">       
+        <div class="swiper gallery-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">  
+                    <span class="social-facebook"><i class="fab fa-facebook-f"></i></span>                
+                    <a href="https://www.facebook.com/photo.php?fbid=707704061397870&set=pb.100064748464301.-2207520000&type=3" target="_blank">
+                    <div class="image">
+                        <img src="/images/slide-10.jpg" alt="Moyee facebook post">
+                    </div> </a>               
+                </div>
+                <div class="swiper-slide slide">   
+                    <span class="social-instagram"><i class="fab fa-instagram"></i></span>                
+                    <a href="https://www.instagram.com/p/Cx4AQzSIpDz/?hl=en" target="_blank">                 
+                    <div class="image">
+                        <img src="images/slide-9.jpg" alt="moyee instagram post">
+                    </div> </a>     
+                </div>
+                <div class="swiper-slide slide">
+                    <span class="social-instagram"><i class="fab fa-instagram"></i></span>                
+                    <a href="https://www.instagram.com/p/CpexOkou7uO/?hl=en" target="_blank">                   
+                    <div class="image">
+                        <img src="images/slide-3.JPG" alt="moyee instagram post">
+                    </div></a>                
+                </div>
+                <div class="swiper-slide slide"> 
+                    <span class="social-instagram"><i class="fab fa-instagram"></i></span>                
+                    <a href="https://www.instagram.com/p/CcSML5BqnQe/?hl=en" target="_blank">                  
+                    <div class="image">
+                        <img src="/images/slide-8.jpg" alt="moyee ethiopia post">
+                    </div></a>                    
+                </div>
+                <div class="swiper-slide slide"> 
+                    <span class="social-facebook"><i class="fab fa-facebook-f"></i></span>                
+                    <a href="https://www.facebook.com/photo.php?fbid=710070664494543&set=pb.100064748464301.-2207520000&type=3" target="_blank">                   
+                    <div class="image">
+                        <img src="images/slide-5.jpg" alt="freshland logo">
+                    </div></a>                   
+                </div>
+                <div class="swiper-slide slide">
+                    <span class="social-facebook"><i class="fab fa-facebook-f"></i></span>                
+                    <a href="https://www.facebook.com/photo?fbid=710070694494540&set=pb.100064748464301.-2207520000" target="_blank">                   
+                    <div class="image">
+                        <img src="/images/slide-6.jpg" alt="Moyee ethiopia facebook post">
+                    </div></a>                   
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section> 
+
+    <!-- Gallery section ends -->
+
+    <!-- story section starts -->
+
+    <section class="coffee" id="coffee">    
+        <div class="banner">
+            <img src="images/banner3.png" alt="">
+            <div class="content">
+                <span>Our Farms</span>
+                <h3>Our Farms are forests!</h3>
+                <a href="/our-farms.html" target="_blank">
+                <button class="btn">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                </a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="images/our-coffee-ban.jpg" alt="moyee coffee banner">
+            <div class="content">
+                <span>Our Coffee</span>
+                <h3>The Way Coffee Was Always Meant To Be Cultivated</h3>
+                <a href="/our-coffee.html" target="_blank">
+                <button class="btn">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+                </a>
+            </div>
+        </div>
+
+        <div class="banner">
+            <img src="images/our-proccess.jpg" alt="moyee coffee banner">
+            <div class="content">
+                <span>Our Facility</span>
+                <h3>This Where We nerd out our coffee</h3>
+                <a href="/our-facility.html" target="_blank">
+                <button class="btn">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button></a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="images/facilties-banner.png" alt="moyee coffee banner">
+            <div class="content">
+                <span>Our Proccess</span>
+                <h3>The delight is in the details</h3>
+                <a href="/our-process.html" target="_blank">
+                <button class="btn">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button></a>
+            </div>
+        </div>        
+        <div class="banner">
+            <img src="images/banner4.png" alt="moyee coffee banner">
+            <div class="content">
+                <span>Our Washing Station</span>
+                <h3>Like a day at the spa, but for coffee beans</h3>
+                <a href="/washing-stations.html" target="_blank">
+                <button class="btn">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button></a>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="images/retail-banner.jpg" alt="moyee coffee banner">
+            <div class="content">
+                <span>RETAIL</span>
+                <h3>A truly farm-to-cup experience</h3>
+                <a href="/retail.html" target="_blank">
+                <button class="btn">
+                    <span>Learn More</span>
+                    <i class="fas fa-arrow-up"></i>
+                </button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- story section ends -->
+    
+    
+    <!-- clients section starts -->
+
+    <section class="clients" id="clients">
+        <h1 class="heading"><span>Our</span> Clients</h1>
+        <div class="swiper clients-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide slide">                  
+                    <div class="image">
+                        <img src="/images/hyatt-regency.jpg" alt="hyatt-regency logo">
+                    </div>                 
+                </div>
+                <div class="swiper-slide slide">
+                    <div class="image">
+                        <img src="images/blendstar.png" alt="blendstar logo">
+                    </div>      
+                </div>
+                <div class="swiper-slide slide">                   
+                    <div class="image">
+                        <img src="images/denmark.jpg" alt="embassy of denmark logo">
+                    </div>                
+                </div>
+                <div class="swiper-slide slide">                   
+                    <div class="image">
+                        <img src="images/ethiopian-airlines.png" alt="ethiopian-airlines logo">
+                    </div>                    
+                </div>
+                <div class="swiper-slide slide">                    
+                    <div class="image">
+                        <img src="images/freshland.jpg" alt="freshland logo">
+                    </div>                   
+                </div>
+                <div class="swiper-slide slide">                   
+                    <div class="image">
+                        <img src="images/radisson-blu.webp" alt="radisson-blu logo">
+                    </div>                   
+                </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <!-- clients section ends -->
+
+    <!-- impact section starts -->
+
+    <section class="impact" id="impact">
+        <h1 class="heading"><span>Our</span> Impact</h1>
+        <a href="#">
+        <div class="box-container">
+            <div class="box">
+                <div class="image">
+                    <img src="images/moyee-logo.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Our FairChain Commitment </h3>
+                    <p>
+                        FairChain is our business philosophy. We took the traditional 
+                        coffee value chain back to the drawing board and reimagined 
+                        how it could be done. Traditionally, the industry prioritizes 
+                        corporate profit 
+                        and then it may seek to “give back” as a CSR initiative... 
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/moyee-logo.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Our Enviromental Promise</h3>
+                    <p>
+                        The next stop in our FairChain is the washing station.
+                        In order to make sure we are maximizing value there,
+                        we have also put systems in place to actively identify 
+                        and remedy issues such as gender equality, decent housing, 
+                        safety protections and health benefits like maternity leave.
+                        But its not just about our farm  its also about the farmers... 
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/moyee-logo.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Community Centric Intiative</h3>
+                    <p>
+                        Weve already mentioned how important the local community 
+                        is when it comes to an equitable and sustainable value chain. 
+                        When our farmers go home at the end of the day, its important 
+                        that their families are doing well. We want to see them enriched
+                         in all the ways that matter. The following initiatives are examples
+                          of the type of work weve been doing (and will continue to do)...
+                    </p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="images/moyee-logo.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>It All Starts</h3>
+                    <p>...with the farmers, who are the caretakers 
+                        of the ancient practice of forest-grown coffee. 
+                        Because they are committed to bringing the very 
+                        best out of our coffee plants, we felt its only 
+                        right to repay them first. Thats why we have devised
+                         a system where we are able to dynamically and objectively 
+                         calculate a 20% premium rate which goes directly to the 
+                         farmers...</p>
+                </div>
+            </div>
+        </div> </a>
+    </section>
+
+    <!-- impact section ends -->
+
+    <!-- send me a coffee section starts -->
+
+    <section class="send">
+
+        <div class="container">
+
+            <div class="content">
+                <h2 class="title">send me a coffee</h2>
+                <p>Try Out A Free Sample</p>
+                <form action="">
+                    <input type="text" class="input" placeholder="Home Address">
+                    <a href="#" class="btn">send</a>
+                </form>
+            </div>
+            <div class="image">
+                <img src="/images/send-me-coffee.png" alt="Send me a coffee banner">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- send me a coffee section ends -->
+
+    <!-- contact section starts -->
+
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>contact</span> us</h1>
+        <div class="row">
+            <div class="image">
+                <img src="images/contact-us.png" alt="contact-us banner">
+            </div>
+            <form action="">
+                <h3>get in touch</h3>
+                <div class="inputBox">
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Your Email">
+                </div>
+                <div class="inputBox">
+                    <input type="number" placeholder="Your Number">
+                    <input type="text" placeholder="Your Subject">
+                </div>
+                <textarea placeholder="Your Message" cols="30" rows="10"></textarea>
+                <input type="submit" value="send message" class="btn">
+            </form>
+        </div>
+    </section>
+
+    <!-- contact section ends -->
+
+    <!-- footer section-->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Contact information</h3>
+                <p>Moyee Coffee Ethiopia
+                       Bole Medhanialem, Evergrand building 1st floor,
+                       in front of Mosaic Hotel.
+                       <br>
+                       +251 118593099<br>
+                        +251 118593100<br>
+                        +251 940262468<br>
+                        info@moyeeethiopia.com
+                     </p>
+            </div>
+            <div class="box">
+                <h3>our services</h3>
+                <a href="#">Moyee Ethiopia Corporate </a>
+                <a href="#">Partners/companies/clients</a>
+                <a href="#">Community Projects</a>
+                <a href="#">Our Shops</a>
+            </div>
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#home">Home</a>
+                <a href="#products">Products</a>
+                <a href="#clients">Clients</a>
+                <a href="#impact">impact</a>
+            </div>
+            <div class="box">
+                <h3>social links</h3>
+                <a href="https://www.facebook.com/moyeecoffee.et/" target="_blank"> <i class="fab fa-facebook-f"></i> facebook</a>
+                <a href="https://twitter.com/moyeecoffee_et?lang=en" target="_blank"> <i class="fab fa-twitter"></i> twitter</a>
+                <a href="https://www.instagram.com/moyeecoffee_et/?hl=en" target="_blank"> <i class="fab fa-instagram"></i> instagram</a>
+                <a href="https://www.linkedin.com/company/moyee-coffee-ethiopia/?originalSubdomain=et" target="_blank"> <i class="fab fa-linkedin"></i> linkedin</a>
+            </div>
+        </div>
+    </section>
+      <section class="credit">
+        &copy; Moyee Coffee Ethiopia &mdash; 2023
+    </section>
+<!-- footer section ends -->
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
